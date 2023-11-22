@@ -11,7 +11,8 @@
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "types:check": "tsc"
+    "types:check": "tsc",
+    "tooling": "concurrently npm:lint npm:format:check npm:types:check"
   },
   "dependencies": {
     "@blend-metrics/icons": "^0.6.3",
@@ -30,6 +31,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "eslint-plugin-prettier": "^5.0.1",
